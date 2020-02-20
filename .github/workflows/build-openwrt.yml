@@ -85,7 +85,7 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         ../$DIY_SH
-        make defconfig
+#        make defconfig
         ls -atl $GITHUB_WORKSPACE
         ls -atl ../
       
