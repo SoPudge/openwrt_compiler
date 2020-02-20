@@ -5,6 +5,11 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
+#
+#=================================================
+# ModBy: SoPudge
+# Blog: http://65536.io
+#=================================================
 
 name: Build OpenWrt
 
@@ -15,7 +20,7 @@ on:
     branches:
       - master
     paths:
-      - '.config'
+      - '.config_x86'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -24,7 +29,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: .config
+  CONFIG_FILE: .config_x86
   DIY_SH: diy.sh
   FREE_UP_DISK: false
   SSH_ACTIONS: false
@@ -62,7 +67,9 @@ jobs:
         sudo -E apt-get -qq clean
 
     - name: Clone source code
-      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+      run: |
+          git clone $REPO_URL -b $REPO_BRANCH openwrt
+          git checkout 3379474d827c2445088458455abd46e4e32246b5
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
