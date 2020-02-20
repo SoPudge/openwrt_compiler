@@ -87,7 +87,7 @@ jobs:
         ../$DIY_SH
         make defconfig
         ls
-        cat $CONFIG_FILE
+        [ -e $CONFIG_FILE ] && cat $CONFIG_FILE
 
 #    - name: SSH connection to Actions
 #      uses: P3TERX/debugger-action@master
