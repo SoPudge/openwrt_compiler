@@ -11,7 +11,7 @@
 # Blog: http://65536.io
 #=================================================
 
-name: Build OpenWrt
+name: Build OpenWrt for X86_64
 
 on:
   release:
@@ -68,7 +68,8 @@ jobs:
 
     - name: Clone source code
       run: |
-          git clone $REPO_URL -b $REPO_BRANCH openwrt
+          git clone $REPO_URL openwrt
+          cd openwrt
           git checkout 3379474d827c2445088458455abd46e4e32246b5
 
     - name: Update feeds
