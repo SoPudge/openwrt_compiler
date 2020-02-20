@@ -84,7 +84,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_SH
         cd openwrt
-        ../$DIY_SH
+#        ../$DIY_SH
 #        make defconfig
         ls -atl $GITHUB_WORKSPACE
         ls -atl ../
