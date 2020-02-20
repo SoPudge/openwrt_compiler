@@ -86,26 +86,29 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
+        ls
+        ls ..
+        cat .config
 
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
+#    - name: SSH connection to Actions
+#      uses: P3TERX/debugger-action@master
+#      if: env.SSH_ACTIONS == 'true'
 
-    - name: Download package
-      id: package
-      run: |
-        cd openwrt
-        make download -j8
-        find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
+#    - name: Download package
+#      id: package
+#      run: |
+#        cd openwrt
+#        make download -j8
+#        find dl -size -1024c -exec ls -l {} \;
+#        find dl -size -1024c -exec rm -f {} \;
 
-    - name: Compile the firmware
-      id: compile
-      run: |
-        cd openwrt
-        echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 V=s
-        echo "::set-output name=status::success"
+#    - name: Compile the firmware
+#      id: compile
+#      run: |
+#        cd openwrt
+#        echo -e "$(nproc) thread compile"
+#        make -j$(nproc) || make -j1 V=s
+#        echo "::set-output name=status::success"
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
