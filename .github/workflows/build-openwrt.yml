@@ -68,9 +68,9 @@ jobs:
 
     - name: Clone source code
       run: |
-          git clone $REPO_URL openwrt
-          cd openwrt
-          git checkout 3379474d827c2445088458455abd46e4e32246b5
+        git clone $REPO_URL openwrt
+        cd openwrt
+        git checkout 3379474d827c2445088458455abd46e4e32246b5
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
