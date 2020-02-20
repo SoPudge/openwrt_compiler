@@ -72,11 +72,11 @@ jobs:
         cd openwrt
         git checkout 3379474d827c2445088458455abd46e4e32246b5
 
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+#    - name: Update feeds
+#      run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+#    - name: Install feeds
+#      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
@@ -87,8 +87,7 @@ jobs:
         ../$DIY_SH
         make defconfig
         ls
-        ls ..
-        cat .config
+        cat $CONFIG_FILE
 
 #    - name: SSH connection to Actions
 #      uses: P3TERX/debugger-action@master
