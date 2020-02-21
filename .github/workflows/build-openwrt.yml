@@ -45,15 +45,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-#    - name: Initialization environment
-#      env:
-#        DEBIAN_FRONTEND: noninteractive
-#      run: |
-#        sudo swapoff /swapfile
-#        sudo rm -rf /swapfile /etc/apt/sources.list.d/*
-#        sudo -E apt-get -qq update
-#        sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler
-#        curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
+    - name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo swapoff /swapfile
+        sudo rm -rf /swapfile /etc/apt/sources.list.d/*
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler
+        curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
 
     - name: Free up disk space
       if: env.FREE_UP_DISK == 'true'
@@ -70,46 +70,46 @@ jobs:
       run: |
         git clone $REPO_URL openwrt
         cd openwrt
-        git checkout 3379474d827c2445088458455abd46e4e32246b5
+        git checkout 8419c9376d30ec77364075b440193ef477df606e
+        
+    - name: Update feeds
+      run: cd openwrt && ./scripts/feeds update -a
 
-#    - name: Update feeds
-#      run: cd openwrt && ./scripts/feeds update -a
-
-#    - name: Install feeds
-#      run: cd openwrt && ./scripts/feeds install -a
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        head -n 10 .config
         chmod +x $DIY_SH
         cd openwrt
-        ls -atl
-        ls -atl ../
+        ../$DIY_SH
+        make defconfig
         wget -O .config https://raw.githubusercontent.com/SoPudge/openwrt_lean_compiler/master/.config_x86
-        ls -atl
-        head -n 10 .config
+        
 
 
-#    - name: SSH connection to Actions
-#      uses: P3TERX/debugger-action@master
-#      if: env.SSH_ACTIONS == 'true'
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
 
-#    - name: Download package
-#      id: package
-#      run: |
-#        cd openwrt
-#        make download -j8
-#        find dl -size -1024c -exec ls -l {} \;
-#        find dl -size -1024c -exec rm -f {} \;
+    - name: Download package
+      id: package
+      run: |
+        cd openwrt
+        make download -j8
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
 
-#    - name: Compile the firmware
-#      id: compile
-#      run: |
-#        cd openwrt
-#        echo -e "$(nproc) thread compile"
-#        make -j$(nproc) || make -j1 V=s
-#        echo "::set-output name=status::success"
+    - name: Compile the firmware
+      id: compile
+      run: |
+        cd openwrt
+        echo -e "$(nproc) thread compile"
+        make -j$(nproc) || make -j1 V=s
+        echo "::set-output name=status::success"
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
