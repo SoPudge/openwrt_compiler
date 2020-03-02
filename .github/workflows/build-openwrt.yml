@@ -70,7 +70,7 @@ jobs:
       run: | 
         git clone $REPO_URL openwrt
         cd openwrt
-        git checkout 8419c9376d30ec77364075b440193ef477df606e
+        #git checkout 8419c9376d30ec77364075b440193ef477df606e
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
