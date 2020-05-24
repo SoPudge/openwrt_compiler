@@ -1,8 +1,9 @@
 # Actions-OpenWrt
 
 ## Modby SoPudge
-- 先修改yml文件当中commit id指定最新的稳定版本
-- 在修改对应的config文件，例如新增一个注释触发自动编译
+- 上传feeds.conf.default并注销helloworld行，用于打开luci-app-ssr-plus选项
+- 更改Actions当中的.config文件名，可以分别执行不同架构的自动编译
+
 
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
