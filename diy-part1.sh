@@ -14,4 +14,10 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-#git clone https://github.com/kuoruan/luci-app-kcptun.git ./feeds/luci/applications
+git clone https://github.com/kuoruan/luci-app-kcptun.git ./feeds/luci/applications/luci-app-kcptun
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git ./feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git ./feeds/packages/net/smartdns
+
+#replace the new smartdns commit-id
+sed -i 's/0aec326d551925a269a960677f4cd432d8e89385/770ce9e8bc502b2769f897676df9495129fb3afa/g' ./feeds/packages/net/smartdns/Makefile
+sed -i 's/1.2020.30/1.2020.05.04-0005/g' ./feeds/packages/net/smartdns/Makefile
