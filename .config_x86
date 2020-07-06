@@ -1,7 +1,7 @@
 #
 # Automatically generated file; DO NOT EDIT.
 # OpenWrt Configuration
-####
+#
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_sunxi is not set
@@ -50,6 +50,27 @@ CONFIG_TARGET_x86_64=y
 # CONFIG_TARGET_x86_zen is not set
 # CONFIG_TARGET_x86_legacy is not set
 # CONFIG_TARGET_x86_geode is not set
+# CONFIG_TARGET_MULTI_PROFILE is not set
+# CONFIG_TARGET_bcm53xx_Generic is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_asus-rt-ac56u is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_asus-rt-ac68u is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_asus-rt-ac87u is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_asus-rt-n18u is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_buffalo-wxr-1900dhp is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_buffalo-wzr-600dhp2 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_buffalo-wzr-900dhp is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_buffalo-wzr-1750dhp is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_dlink-dir-885l is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_linksys-ea6500-v2 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_netgear-r6250 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_netgear-r6300-v2 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_netgear-r7000 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_netgear-r7900 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_netgear-r8000 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_smartrg-sr400ac is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3 is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_arris-sbr-ac1900p is not set
+# CONFIG_TARGET_bcm53xx_DEVICE_arris-sbr-ac3200p is not set
 CONFIG_TARGET_x86_64_Generic=y
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_TARGET_BOARD="x86"
@@ -222,8 +243,8 @@ CONFIG_GRUB_TITLE="OpenWrt"
 #
 # Image Options
 #
-CONFIG_TARGET_KERNEL_PARTSIZE=32
-CONFIG_TARGET_ROOTFS_PARTSIZE=400
+CONFIG_TARGET_KERNEL_PARTSIZE=16
+CONFIG_TARGET_ROOTFS_PARTSIZE=90
 CONFIG_TARGET_ROOTFS_PARTNAME=""
 
 #
@@ -1909,7 +1930,7 @@ CONFIG_PACKAGE_kmod-fs-antfs=y
 # CONFIG_PACKAGE_kmod-fs-configfs is not set
 # CONFIG_PACKAGE_kmod-fs-cramfs is not set
 # CONFIG_PACKAGE_kmod-fs-efivarfs is not set
-CONFIG_PACKAGE_kmod-fs-exfat=y
+# CONFIG_PACKAGE_kmod-fs-exfat0 is not set
 # CONFIG_PACKAGE_kmod-fs-exportfs is not set
 CONFIG_PACKAGE_kmod-fs-ext4=y
 # CONFIG_PACKAGE_kmod-fs-f2fs is not set
@@ -2559,6 +2580,13 @@ CONFIG_PACKAGE_kmod-ath9k=y
 CONFIG_PACKAGE_kmod-ath9k-common=y
 CONFIG_PACKAGE_kmod-ath9k-htc=y
 # CONFIG_PACKAGE_kmod-b43 is not set
+# CONFIG_B43_FW_4_150 is not set
+# CONFIG_B43_FW_4_178 is not set
+# CONFIG_B43_FW_5_10 is not set
+# CONFIG_B43_FW_5_100_138 is not set
+# CONFIG_B43_FW_6_30 is not set
+# CONFIG_B43_OPENFIRMWARE is not set
+# CONFIG_PACKAGE_B43_BUSES_BCMA is not set
 # CONFIG_PACKAGE_kmod-b43legacy is not set
 # CONFIG_PACKAGE_kmod-brcmfmac is not set
 # CONFIG_PACKAGE_kmod-brcmsmac is not set
@@ -2716,9 +2744,6 @@ CONFIG_PACKAGE_luci-lib-fs=y
 # Node.js
 #
 # CONFIG_PACKAGE_node is not set
-# CONFIG_NODEJS_ICU_NONE is not set
-# CONFIG_NODEJS_ICU_SMALL is not set
-# CONFIG_NODEJS_ICU_SYSTEM is not set
 # CONFIG_PACKAGE_node-arduino-firmata is not set
 # CONFIG_PACKAGE_node-cylon is not set
 # CONFIG_PACKAGE_node-cylon-firmata is not set
@@ -4002,7 +4027,7 @@ CONFIG_PACKAGE_libuv=y
 # CONFIG_PACKAGE_libwebcam is not set
 CONFIG_PACKAGE_libwebsockets-full=y
 # CONFIG_PACKAGE_libwebsockets-mbedtls is not set
-#CONFIG_PACKAGE_libwebsockets-openssl=y
+CONFIG_PACKAGE_libwebsockets-openssl=y
 # CONFIG_PACKAGE_libwrap is not set
 # CONFIG_PACKAGE_libwxbase is not set
 # CONFIG_PACKAGE_libx264 is not set
@@ -4097,6 +4122,7 @@ CONFIG_LUCI_LANG_zh-cn=y
 # CONFIG_LUCI_LANG_cs is not set
 # CONFIG_LUCI_LANG_fr is not set
 # CONFIG_LUCI_LANG_it is not set
+# CONFIG_PACKAGE_luci-compat is not set
 CONFIG_PACKAGE_luci-mod-admin-full=y
 # CONFIG_PACKAGE_luci-mod-failsafe is not set
 # CONFIG_PACKAGE_luci-mod-freifunk is not set
@@ -4189,6 +4215,7 @@ CONFIG_PACKAGE_luci-app-mwan3=y
 # CONFIG_PACKAGE_luci-app-polipo is not set
 # CONFIG_PACKAGE_luci-app-pppoe-relay is not set
 # CONFIG_PACKAGE_luci-app-privoxy is not set
+# CONFIG_PACKAGE_luci-app-ps3netsrv is not set
 # CONFIG_PACKAGE_luci-app-qbittorrent is not set
 # CONFIG_PACKAGE_luci-app-qos is not set
 # CONFIG_PACKAGE_luci-app-radicale is not set
@@ -4552,6 +4579,7 @@ CONFIG_POSTFIX_PCRE=y
 #
 # Cloud Manager
 #
+CONFIG_PACKAGE_rclone-ng=y
 CONFIG_PACKAGE_rclone-webui-react=y
 
 #
@@ -4570,6 +4598,7 @@ CONFIG_PACKAGE_rclone-webui-react=y
 CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_gnurl is not set
 # CONFIG_PACKAGE_lftp is not set
+# CONFIG_PACKAGE_ps3netsrv is not set
 # CONFIG_PACKAGE_rosy-file-server is not set
 # CONFIG_PACKAGE_rsync is not set
 # CONFIG_PACKAGE_rsyncd is not set
@@ -5648,6 +5677,8 @@ CONFIG_PACKAGE_btrfs-progs=y
 # CONFIG_PACKAGE_dumpe2fs is not set
 # CONFIG_PACKAGE_e2freefrag is not set
 CONFIG_PACKAGE_e2fsprogs=y
+# CONFIG_PACKAGE_exfat-fsck is not set
+# CONFIG_PACKAGE_exfat-mkfs is not set
 # CONFIG_PACKAGE_f2fs-tools is not set
 # CONFIG_PACKAGE_f2fsck is not set
 # CONFIG_PACKAGE_filefrag is not set
