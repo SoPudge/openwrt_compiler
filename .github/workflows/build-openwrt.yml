@@ -18,6 +18,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+      paths:
+      - '.config_mt7621'
 #  schedule:
 #    - cron: 0 8 * * 5
 
