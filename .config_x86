@@ -5631,7 +5631,7 @@ CONFIG_PACKAGE_zerotier=y
 # CONFIG_PACKAGE_haproxy is not set
 # CONFIG_PACKAGE_haproxy-nossl is not set
 CONFIG_PACKAGE_kcptun-client=y
-CONFIG_PACKAGE_kcptun-config=y
+# CONFIG_PACKAGE_kcptun-config is not set
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
 # CONFIG_PACKAGE_microsocks is not set
@@ -5966,7 +5966,7 @@ CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_tayga is not set
 CONFIG_PACKAGE_tcpdump=y
 # CONFIG_PACKAGE_tcpdump-mini is not set
-CONFIG_PACKAGE_tcpping=y
+# CONFIG_PACKAGE_tcpping is not set
 # CONFIG_PACKAGE_tgt is not set
 # CONFIG_PACKAGE_tmate-ssh-server is not set
 # CONFIG_PACKAGE_tor is not set
