@@ -17,8 +17,3 @@
 #git clone https://github.com/kuoruan/luci-app-kcptun.git ./package/luci-app-kcptun
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git ./package/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns.git ./package/smartdns
-
-#replace the new smartdns commit-id
-sed -i 's/a6fe329105c7275d4683d17e95ab9d9f93a9c863/f50e4dd0813da9300580f7188e44ed72a27ae79c/g' ./feeds/packages/net/smartdns/Makefile
-sed -i 's/1.2020.30/1.2021.08.27-1923/g' ./feeds/packages/net/smartdns/Makefile
-sed -i 's/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/g' ./feeds/packages/net/smartdns/Makefile
