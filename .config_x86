@@ -5384,7 +5384,7 @@ CONFIG_OPENLDAP_DEBUG=y
 # Printing
 #
 CONFIG_PACKAGE_cups=y
-CONFIG_PACKAGE_cups-bjnp=y
+＃ CONFIG_PACKAGE_cups-bjnp
 CONFIG_PACKAGE_cups-bsd=y
 CONFIG_PACKAGE_cups-client=y
 CONFIG_PACKAGE_cups-filters=y
