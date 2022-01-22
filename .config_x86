@@ -1,7 +1,7 @@
 #
 # Automatically generated file; DO NOT EDIT.
 # OpenWrt Configuration
-##
+#
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_sunxi is not set
@@ -4001,10 +4001,10 @@ CONFIG_PACKAGE_glib2=y
 # CONFIG_PACKAGE_libatasmart is not set
 # CONFIG_PACKAGE_libaudit is not set
 # CONFIG_PACKAGE_libauparse is not set
-# CONFIG_PACKAGE_libavahi-client is not set
+CONFIG_PACKAGE_libavahi-client=y
 # CONFIG_PACKAGE_libavahi-compat-libdnssd is not set
-# CONFIG_PACKAGE_libavahi-dbus-support is not set
-# CONFIG_PACKAGE_libavahi-nodbus-support is not set
+CONFIG_PACKAGE_libavahi-dbus-support=y
+CONFIG_PACKAGE_libavahi-nodbus-support=y
 # CONFIG_PACKAGE_libbfd is not set
 CONFIG_PACKAGE_libblkid=y
 CONFIG_PACKAGE_libblobmsg-json=y
@@ -4065,13 +4065,13 @@ CONFIG_LIBCURL_PROXY=y
 # CONFIG_LIBCURL_UNIX_SOCKETS is not set
 # CONFIG_LIBCURL_LIBCURL_OPTION is not set
 # CONFIG_LIBCURL_VERBOSE is not set
-# CONFIG_PACKAGE_libdaemon is not set
+CONFIG_PACKAGE_libdaemon=y
 # CONFIG_PACKAGE_libdaq is not set
 # CONFIG_PACKAGE_libdaq3 is not set
 # CONFIG_PACKAGE_libdb47 is not set
 # CONFIG_PACKAGE_libdb47xx is not set
 # CONFIG_PACKAGE_libdbi is not set
-# CONFIG_PACKAGE_libdbus is not set
+CONFIG_PACKAGE_libdbus=y
 # CONFIG_PACKAGE_libdevmapper is not set
 # CONFIG_PACKAGE_libdevmapper-selinux is not set
 # CONFIG_PACKAGE_libdmapsharing is not set
@@ -4119,7 +4119,7 @@ CONFIG_PACKAGE_libfreetype=y
 # CONFIG_PACKAGE_libgcrypt is not set
 # CONFIG_PACKAGE_libgd is not set
 # CONFIG_PACKAGE_libgd-full is not set
-# CONFIG_PACKAGE_libgdbm is not set
+CONFIG_PACKAGE_libgdbm=y
 # CONFIG_PACKAGE_libgee is not set
 CONFIG_PACKAGE_libgmp=y
 # CONFIG_PACKAGE_libgnurl is not set
@@ -5158,13 +5158,13 @@ CONFIG_PACKAGE_miniupnpd=y
 #
 # CONFIG_PACKAGE_aggregate is not set
 # CONFIG_PACKAGE_announce is not set
-# CONFIG_PACKAGE_avahi-autoipd is not set
-# CONFIG_PACKAGE_avahi-daemon-service-http is not set
-# CONFIG_PACKAGE_avahi-daemon-service-ssh is not set
-# CONFIG_PACKAGE_avahi-dbus-daemon is not set
-# CONFIG_PACKAGE_avahi-dnsconfd is not set
-# CONFIG_PACKAGE_avahi-nodbus-daemon is not set
-# CONFIG_PACKAGE_avahi-utils is not set
+CONFIG_PACKAGE_avahi-autoipd=y
+CONFIG_PACKAGE_avahi-daemon-service-http=y
+CONFIG_PACKAGE_avahi-daemon-service-ssh=y
+CONFIG_PACKAGE_avahi-dbus-daemon=y
+CONFIG_PACKAGE_avahi-dnsconfd=y
+CONFIG_PACKAGE_avahi-nodbus-daemon=y
+CONFIG_PACKAGE_avahi-utils=y
 # CONFIG_PACKAGE_bind-check is not set
 # CONFIG_PACKAGE_bind-client is not set
 # CONFIG_PACKAGE_bind-dig is not set
@@ -5381,8 +5381,10 @@ CONFIG_OPENLDAP_DEBUG=y
 # Printing
 #
 CONFIG_PACKAGE_cups=y
+# CONFIG_PACKAGE_cups-bjnp is not set
 CONFIG_PACKAGE_cups-bsd=y
 CONFIG_PACKAGE_cups-client=y
+# CONFIG_PACKAGE_cups-dymo is not set
 CONFIG_PACKAGE_cups-filters=y
 CONFIG_PACKAGE_cups-opfilter=y
 CONFIG_PACKAGE_cups-ppdc=y
@@ -6686,7 +6688,7 @@ CONFIG_PACKAGE_coreutils-base64=y
 # CONFIG_PACKAGE_csstidy is not set
 # CONFIG_PACKAGE_ct-bugcheck is not set
 # CONFIG_PACKAGE_ctop is not set
-# CONFIG_PACKAGE_dbus is not set
+CONFIG_PACKAGE_dbus=y
 # CONFIG_PACKAGE_dbus-utils is not set
 # CONFIG_PACKAGE_dc is not set
 # CONFIG_PACKAGE_device-observatory is not set
