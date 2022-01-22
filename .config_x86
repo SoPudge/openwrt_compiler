@@ -5383,7 +5383,6 @@ CONFIG_OPENLDAP_DEBUG=y
 CONFIG_PACKAGE_cups=y
 CONFIG_PACKAGE_cups-bsd=y
 CONFIG_PACKAGE_cups-client=y
-CONFIG_PACKAGE_cups-dymo=y
 CONFIG_PACKAGE_cups-filters=y
 CONFIG_PACKAGE_cups-opfilter=y
 CONFIG_PACKAGE_cups-ppdc=y
