@@ -18,6 +18,11 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+  push:
+    branches:
+      - master
+    paths:
+      - '.config_x86'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
