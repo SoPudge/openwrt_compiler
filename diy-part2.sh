@@ -21,4 +21,4 @@ sed -i 's/a6fe329105c7275d4683d17e95ab9d9f93a9c863/f50e4dd0813da9300580f7188e44e
 sed -i 's/1.2020.30/1.2021.08.27-1923/g' ./feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/g' ./feeds/packages/net/smartdns/Makefile
 #avahi-glib for cups-filters
-sed -i 's/disable-glib/enanle-glib/g' ./feeds/packages/libs/avahi/Makefile
+sed -i 's/disable-glib/enable-glib/g' ./feeds/packages/libs/avahi/Makefile
