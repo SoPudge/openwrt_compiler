@@ -4071,7 +4071,7 @@ CONFIG_PACKAGE_glib2=y
 CONFIG_PACKAGE_libavahi-client=y
 # CONFIG_PACKAGE_libavahi-compat-libdnssd is not set
 CONFIG_PACKAGE_libavahi-dbus-support=y
-# CONFIG_PACKAGE_libavahi-nodbus-support is not set
+CONFIG_PACKAGE_libavahi-nodbus-support=y
 # CONFIG_PACKAGE_libbfd is not set
 CONFIG_PACKAGE_libblkid=y
 CONFIG_PACKAGE_libblobmsg-json=y
@@ -5235,7 +5235,7 @@ CONFIG_PACKAGE_miniupnpd=y
 # CONFIG_PACKAGE_avahi-daemon-service-ssh is not set
 CONFIG_PACKAGE_avahi-dbus-daemon=y
 # CONFIG_PACKAGE_avahi-dnsconfd is not set
-# CONFIG_PACKAGE_avahi-nodbus-daemon is not set
+CONFIG_PACKAGE_avahi-nodbus-daemon=y
 CONFIG_PACKAGE_avahi-utils=y
 # CONFIG_PACKAGE_bind-check is not set
 # CONFIG_PACKAGE_bind-client is not set
