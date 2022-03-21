@@ -5799,7 +5799,7 @@ CONFIG_BAIDUPCS_WEB_COMPRESS_UPX=y
 # CONFIG_PACKAGE_haproxy is not set
 # CONFIG_PACKAGE_haproxy-nossl is not set
 CONFIG_PACKAGE_kcptun-client=y
-# CONFIG_PACKAGE_kcptun-config is not set
+CONFIG_PACKAGE_kcptun-config=y
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
 CONFIG_PACKAGE_microsocks=y
