@@ -91,7 +91,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && mv files openwrt/_
+        [ -e files ] && mv files openwrt/files
         head -n 10 .config_x86
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         ls openwrt/ -atl
