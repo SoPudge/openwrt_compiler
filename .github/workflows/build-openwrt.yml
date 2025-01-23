@@ -114,6 +114,9 @@ jobs:
       id: compile
       run: |
         cd openwrt
+        sed -i 's/--set=llvm.download-ci-llvm=true/--set=source.crates-io.replace-with=mirror \\\
+        --set=source.mirror.registry=sparse+https:\/\/mirrors.bfsu.edu.cn\/crates.io-index\/ \\\
+        --set=llvm.download-ci-llvm=false/' package/feeds/packages/rust/Makefile
         ls -atl
         cat .config
         echo -e "$(nproc) thread compile"
