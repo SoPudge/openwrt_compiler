@@ -4,6 +4,7 @@ src-git routing https://github.com/coolsnowwolf/routing
 src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git openwrt_helloworld https://github.com/sbwml/openwrt_helloworld
 src-git helloworld https://github.com/fw876/helloworld.git
+src-git openclash https://github.com/vernesong/OpenClash.git
 src-git openwrt_passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git
 src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git
 src-git passwall https://github.com/xiaorouji/openwrt-passwall.git
