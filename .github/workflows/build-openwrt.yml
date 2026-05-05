@@ -161,4 +161,4 @@ jobs:
       run: |
         gh release list --limit 100 --json tagName,createdAt \
           --jq 'sort_by(.createdAt) | reverse | .[3:][] | .tagName' \
-          | xargs -r -n1 gh release delete --yes --cleanup-tag
+          | xargs -r -n1 gh release delete --yes --cleanup-tag || true
